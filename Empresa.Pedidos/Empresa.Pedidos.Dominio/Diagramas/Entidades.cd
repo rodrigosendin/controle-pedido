@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Empresa.Pedidos.Dominio.Entidades.Pedido">
+    <Position X="3.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAQEAAAAACAAAAAAAAAQAAQAAAAAEAAAAA=</HashCode>
+      <FileName>Entidades\Pedido.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cliente" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Itens" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Empresa.Pedidos.Dominio.Entidades.Cliente">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgCAAAAAAAAAAAAAAAAAAAAAAAAIAAAEQAAA=</HashCode>
+      <FileName>Entidades\Cliente.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Localidade" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Empresa.Pedidos.Dominio.Entidades.PedidoItem">
+    <Position X="3.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAABIAAAEAAAQAAAAAAAQCAAAAAE=</HashCode>
+      <FileName>Entidades\PedidoItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Produto" />
+      <Property Name="Pedido" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Empresa.Pedidos.Dominio.Entidades.Produto">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entidades\Produto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Empresa.Pedidos.Dominio.ObjetosValor.Localidade">
+    <Position X="9.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAIAAEAAAAAAAAAIAACAAAAAAAAAAAAAAAEAEAA=</HashCode>
+      <FileName>ObjetosValor\Localidade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Empresa.Pedidos.Dominio.ObjetosValor.PedidoStatus">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObjetosValor\PedidoStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

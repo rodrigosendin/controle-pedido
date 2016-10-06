@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empresa.Pedidos.Dominio", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empresa.Pedidos.Testes", "Empresa.Pedidos.Testes\Empresa.Pedidos.Testes.csproj", "{4E0154A7-A902-4B5D-BC08-A364087071E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kite.Base.Dominio", "..\..\kite-sharedkernel\Kite.SharedKernel\Kite.Base.Dominio\Kite.Base.Dominio.csproj", "{62CBD6EC-2001-4CF9-8769-31441055EF2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{4E0154A7-A902-4B5D-BC08-A364087071E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E0154A7-A902-4B5D-BC08-A364087071E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E0154A7-A902-4B5D-BC08-A364087071E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62CBD6EC-2001-4CF9-8769-31441055EF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62CBD6EC-2001-4CF9-8769-31441055EF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62CBD6EC-2001-4CF9-8769-31441055EF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62CBD6EC-2001-4CF9-8769-31441055EF2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +38,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6FB05317-4D28-48CF-9F74-EE80F9A46E9B} = {49F90AC7-F643-4770-8B2F-4380AF283B01}
 		{4E0154A7-A902-4B5D-BC08-A364087071E6} = {49F90AC7-F643-4770-8B2F-4380AF283B01}
+		{62CBD6EC-2001-4CF9-8769-31441055EF2F} = {E7AB2E30-C6A9-40B1-94E3-457045EAB7F4}
 	EndGlobalSection
 EndGlobal

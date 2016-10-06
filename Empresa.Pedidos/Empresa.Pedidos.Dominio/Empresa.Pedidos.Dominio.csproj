@@ -40,7 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Pedido.cs" />
+    <Compile Include="Entidades\PedidoItem.cs" />
+    <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="ObjetosValor\Localidade.cs" />
+    <Compile Include="ObjetosValor\PedidoStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\kite-sharedkernel\Kite.SharedKernel\Kite.Base.Dominio\Kite.Base.Dominio.csproj">
+      <Project>{62CBD6EC-2001-4CF9-8769-31441055EF2F}</Project>
+      <Name>Kite.Base.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagramas\Entidades.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
