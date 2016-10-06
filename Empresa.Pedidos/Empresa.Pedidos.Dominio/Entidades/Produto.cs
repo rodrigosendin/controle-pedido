@@ -2,7 +2,7 @@
 
 namespace Empresa.Pedidos.Dominio.Entidades
 {
-    public class Produto : EntidadeBase
+    public class Produto : EntidadeBase, IAggregateRoot
     {
         public string   Nome    { get; set; }
         public decimal  Valor   { get; set; }

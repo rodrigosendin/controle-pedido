@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Empresa.Pedidos.Dominio.Entidades
 {
-    public class Pedido : EntidadeBase
+    public class Pedido : EntidadeBase, IAggregateRoot
     {
         public Cliente              Cliente     { get; set; }
         public DateTime             DataPedido  { get; set; }
