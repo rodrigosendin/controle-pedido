@@ -12,12 +12,18 @@ namespace Empresa.Pedidos.Dominio.ObjetosValor
         public double Longitude { get; set; }
         public double Latitude  { get; set; }
 
+        //public double CalcularDistancia(Localidade localidade)
+        //{
+        //    //throw new NotImplementedException();
+        //    return 243;
+        //}
+
         public double CalcularDistancia(Localidade localidade)
         {
-            var baseRad     = Math.PI * Latitude / 180;
-            var targetRad   = Math.PI * localidade.Latitude / 180;
-            var theta       = Longitude - localidade.Longitude;
-            var thetaRad    = Math.PI * theta / 180;
+            var baseRad = Math.PI * Latitude / 180;
+            var targetRad = Math.PI * localidade.Latitude / 180;
+            var theta = Longitude - localidade.Longitude;
+            var thetaRad = Math.PI * theta / 180;
 
             double dist =
                 Math.Sin(baseRad) * Math.Sin(targetRad) + Math.Cos(baseRad) *
@@ -27,7 +33,7 @@ namespace Empresa.Pedidos.Dominio.ObjetosValor
             dist = dist * 180 / Math.PI;
             dist = dist * 60 * 1.1515;
 
-            return dist * 1.609344; // KM
+            return Math.Round(dist * 1.609344); // KM
         }
     }
 }
