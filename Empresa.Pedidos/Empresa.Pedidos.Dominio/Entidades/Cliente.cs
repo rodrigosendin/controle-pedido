@@ -3,7 +3,7 @@ using Kite.Base.Dominio.Entidades;
 
 namespace Empresa.Pedidos.Dominio.Entidades
 {
-    public class Cliente : EntidadeBase, IAggregateRoot
+    public class Cliente : EntidadeBase
     {
         public string       Nome            { get; set; }
         public string       Email           { get; set; }

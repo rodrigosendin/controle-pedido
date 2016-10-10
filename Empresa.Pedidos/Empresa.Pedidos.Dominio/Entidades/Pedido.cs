@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Empresa.Pedidos.Dominio.Entidades
 {
-    public class Pedido : EntidadeBase, IAggregateRoot
+    public class Pedido : EntidadeBase
     {
         public Cliente              Cliente     { get; set; }
         public DateTime             DataPedido  { get; set; }
@@ -21,14 +21,19 @@ namespace Empresa.Pedidos.Dominio.Entidades
             }
         }
 
-        public void CalculaTotal()
-        {
-            
-        }
-
         public bool TemLimiteCredito()
         {
-            return Cliente?.LimiteCredito >= Total;
+            throw new NotImplementedException();
+        }
+
+        public bool TemEstoqueDisponivel()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AbateQuantidadeDoEstoque()
+        {
+            throw new NotImplementedException();
         }
     }
 }

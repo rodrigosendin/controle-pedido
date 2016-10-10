@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Empresa.Pedidos.Dominio.Entidades.Pedido">
-    <Position X="3.5" Y="0.5" Width="2.25" />
+    <Position X="3.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAQEAAAAACAAAAAAAAAQAAQAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAEAAAAEAAAAADAAAAAAAAAQAAQAAAACEAAAAA=</HashCode>
       <FileName>Entidades\Pedido.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -25,14 +25,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Empresa.Pedidos.Dominio.Entidades.PedidoItem">
-    <Position X="3.5" Y="3.5" Width="2.25" />
+    <Position X="3.25" Y="3.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAEAAABIAAAEAAAQAAAAAAAQCAAAAAE=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAEAAABIAAAEAAAAAAAAAAAQCAAAAAE=</HashCode>
       <FileName>Entidades\PedidoItem.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Produto" />
       <Property Name="Pedido" />
+      <Property Name="Produto" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Empresa.Pedidos.Dominio.Entidades.Produto">
@@ -50,7 +50,7 @@
     </TypeIdentifier>
   </Class>
   <Enum Name="Empresa.Pedidos.Dominio.ObjetosValor.PedidoStatus">
-    <Position X="0.75" Y="0.75" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ObjetosValor\PedidoStatus.cs</FileName>

@@ -12,12 +12,6 @@ namespace Empresa.Pedidos.Dominio.ObjetosValor
         public double Longitude { get; set; }
         public double Latitude  { get; set; }
 
-        //public double CalcularDistancia(Localidade localidade)
-        //{
-        //    //throw new NotImplementedException();
-        //    return 243;
-        //}
-
         public double CalcularDistancia(Localidade localidade)
         {
             var baseRad = Math.PI * Latitude / 180;
@@ -37,6 +31,3 @@ namespace Empresa.Pedidos.Dominio.ObjetosValor
         }
     }
 }
-
-
-

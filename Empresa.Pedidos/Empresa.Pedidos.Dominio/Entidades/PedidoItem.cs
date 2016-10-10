@@ -18,18 +18,14 @@ namespace Empresa.Pedidos.Dominio.Entidades
             }
         }
 
-        public void CalculaTotalItem()
-        {
-
-        }
-
         public bool TemEstoqueDisponivel()
         {
-            return Produto?.Estoque >= Quantidade;
+            throw new NotImplementedException();
         }
 
         public void AbateQuantidadeDoEstoque()
         {
+            throw new NotImplementedException();
         }
     }
 }

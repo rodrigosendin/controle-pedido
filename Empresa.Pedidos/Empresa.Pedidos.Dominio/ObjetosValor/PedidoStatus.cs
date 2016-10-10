@@ -1,10 +1,18 @@
-﻿namespace Empresa.Pedidos.Dominio.ObjetosValor
+﻿using System.ComponentModel;
+
+namespace Empresa.Pedidos.Dominio.ObjetosValor
 {
     public enum PedidoStatus
     {
-        Aberto, AnaliseCredito, Faturamento, Pago
+        Aberto = 1,
+
+        [Description("Análise de Crédito")]
+        Analise = 2,
+
+        Faturamento = 3,
+
+        Pago = 4,
+
+        Cancelado = 5
     }
 }
-
-
-
