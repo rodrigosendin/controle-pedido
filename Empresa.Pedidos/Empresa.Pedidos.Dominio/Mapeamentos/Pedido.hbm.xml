@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="Empresa.Pedidos.Dominio.Entidades"
+                   assembly="Empresa.Pedidos.Dominio">
+
+  <class name="Pedido" lazy="false">
+    <id name="Id" type="Int64" unsaved-value="0">
+      <generator class="native"/>
+    </id>
+
+    <many-to-one name="Cliente" class="Cliente" fetch="join"
+                 not-null="true" foreign-key="fk_pedido_cliente" index="idx_pedido_cliente" />
+
+    <property name="DataPedido" type="DateTime"           not-null="true" />
+    <property name="Status"                               not-null="true" />
+
+    <bag name="Itens" lazy="false" generic="true" cascade="all-delete-orphan">
+      <key column="Pedido" />
+      <one-to-many class="PedidoItem" />
+    </bag>
+  </class>
+
+</hibernate-mapping>

@@ -20,7 +20,7 @@ namespace Empresa.Pedidos.Dominio.Entidades
 
         public bool TemEstoqueDisponivel()
         {
-            throw new NotImplementedException();
+            return Produto == null ? false : Produto.Estoque >= Quantidade;
         }
 
         public void AbateQuantidadeDoEstoque()

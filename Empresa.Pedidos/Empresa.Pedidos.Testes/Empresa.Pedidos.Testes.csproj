@@ -44,14 +44,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\TestePedidoModelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\TesteCriaDatabase.cs" />
+    <Compile Include="Servicos\TesteServicoCliente.cs" />
+    <Compile Include="Servicos\TesteServicoPedido.cs" />
+    <Compile Include="Servicos\TesteServicoProduto.cs" />
     <Compile Include="TesteHelloWorld.cs" />
-    <Compile Include="TesteLocalidade.cs" />
+    <Compile Include="Modelo\TesteLocalidade.cs" />
+    <Compile Include="Repositorio\TesteRepoPedido.cs" />
+    <Compile Include="Repositorio\TesteRepoCliente.cs" />
+    <Compile Include="Repositorio\TesteRepoProduto.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\kite-sharedkernel\Kite.SharedKernel\Kite.Base.Dominio\Kite.Base.Dominio.csproj">
       <Project>{62cbd6ec-2001-4cf9-8769-31441055ef2f}</Project>
       <Name>Kite.Base.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\kite-sharedkernel\Kite.SharedKernel\Kite.Base.Repositorio\Kite.Base.Repositorio.csproj">
+      <Project>{9520561c-891b-45a1-96bb-bac7d25f600b}</Project>
+      <Name>Kite.Base.Repositorio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\kite-sharedkernel\Kite.SharedKernel\Kite.Base.Util\Kite.Base.Util.csproj">
+      <Project>{c96d2680-5e97-423b-bc38-6850867effbc}</Project>
+      <Name>Kite.Base.Util</Name>
     </ProjectReference>
     <ProjectReference Include="..\Empresa.Pedidos.Dominio\Empresa.Pedidos.Dominio.csproj">
       <Project>{6fb05317-4d28-48cf-9f74-ee80f9a46e9b}</Project>
@@ -63,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="nhibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

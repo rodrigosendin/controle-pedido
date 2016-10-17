@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="Empresa.Pedidos.Dominio.Entidades"
+                   assembly="Empresa.Pedidos.Dominio">
+  <class name="Cliente" lazy="false">
+    <id name="Id" type="Int64" unsaved-value="0">
+      <generator class="native"/>
+    </id>
+    <property name="Nome"           type="string" length="100" not-null="true" />
+    <property name="Email"          type="string" length="100" not-null="false" />
+    <property name="Telefone"       type="string" length="20"  not-null="false" />   
+    <property name="LimiteCredito"  type="decimal(10,2)"       not-null="false" />
+
+    <component name="Localidade">
+      <property name="Cidade"       type="string" length="100" not-null="false" />
+      <property name="Uf"           type="string" length="2"   not-null="false" />
+      <property name="Endereco"     type="string" length="100" not-null="false" />
+      <property name="Bairro"       type="string" length="50"  not-null="false" />
+      <property name="Longitude"    type="double"              not-null="false" />
+      <property name="Latitude"     type="double"              not-null="false" />      
+    </component>
+  </class>
+</hibernate-mapping>
+

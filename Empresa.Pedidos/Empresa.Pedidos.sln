@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empresa.Pedidos.Testes", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kite.Base.Dominio", "..\..\kite-sharedkernel\Kite.SharedKernel\Kite.Base.Dominio\Kite.Base.Dominio.csproj", "{62CBD6EC-2001-4CF9-8769-31441055EF2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kite.Base.Repositorio", "..\..\kite-sharedkernel\Kite.SharedKernel\Kite.Base.Repositorio\Kite.Base.Repositorio.csproj", "{9520561C-891B-45A1-96BB-BAC7D25F600B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kite.Base.Util", "..\..\kite-sharedkernel\Kite.SharedKernel\Kite.Base.Util\Kite.Base.Util.csproj", "{C96D2680-5E97-423B-BC38-6850867EFFBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{62CBD6EC-2001-4CF9-8769-31441055EF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62CBD6EC-2001-4CF9-8769-31441055EF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62CBD6EC-2001-4CF9-8769-31441055EF2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9520561C-891B-45A1-96BB-BAC7D25F600B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9520561C-891B-45A1-96BB-BAC7D25F600B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9520561C-891B-45A1-96BB-BAC7D25F600B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9520561C-891B-45A1-96BB-BAC7D25F600B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C96D2680-5E97-423B-BC38-6850867EFFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96D2680-5E97-423B-BC38-6850867EFFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96D2680-5E97-423B-BC38-6850867EFFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96D2680-5E97-423B-BC38-6850867EFFBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +51,7 @@ Global
 		{6FB05317-4D28-48CF-9F74-EE80F9A46E9B} = {49F90AC7-F643-4770-8B2F-4380AF283B01}
 		{4E0154A7-A902-4B5D-BC08-A364087071E6} = {49F90AC7-F643-4770-8B2F-4380AF283B01}
 		{62CBD6EC-2001-4CF9-8769-31441055EF2F} = {E7AB2E30-C6A9-40B1-94E3-457045EAB7F4}
+		{9520561C-891B-45A1-96BB-BAC7D25F600B} = {E7AB2E30-C6A9-40B1-94E3-457045EAB7F4}
+		{C96D2680-5E97-423B-BC38-6850867EFFBC} = {E7AB2E30-C6A9-40B1-94E3-457045EAB7F4}
 	EndGlobalSection
 EndGlobal

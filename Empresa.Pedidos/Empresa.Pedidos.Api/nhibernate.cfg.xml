@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+  <session-factory>
+
+    <!-- configurations -->
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+    <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
+    <property name="connection.connection_string">
+      Server=(local);initial catalog=Pedidos;user id=sa; password=Bola123
+    </property>
+
+    <!-- Mostra SQL gerado pelo NHiberante no Console.Out -->
+    <property name="show_sql">false</property>
+
+    <!-- Timeout dos Comandos -->
+    <property name="command_timeout">120</property>
+
+    <!-- Substituições das queries HQL  -->
+    <property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+
+    <!-- É uma verificação do NH que valida se os métodos estão marcados como virtual -->
+    <property name="use_proxy_validator">false</property>
+
+    <!-- Classe que faz o gerenciamento das Sessões do NHibernate -->
+    <property name="current_session_context_class">
+      NHibernate.Context.ManagedWebSessionContext
+    </property>
+
+    <!-- Registrando os Asselmblies que contém os mapeamentos -->
+    <mapping assembly="Empresa.Pedidos.Dominio"/>
+    
+  </session-factory>
+</hibernate-configuration>

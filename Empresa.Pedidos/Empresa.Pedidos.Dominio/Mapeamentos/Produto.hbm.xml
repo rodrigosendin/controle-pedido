@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="Empresa.Pedidos.Dominio.Entidades"
+                   assembly="Empresa.Pedidos.Dominio">
+
+  <class name="Produto" lazy="false">
+    <id name="Id" type="Int64" unsaved-value="0">
+      <generator class="native"/>
+    </id>
+    <property name="Nome"     type="string" length="50" not-null="true" />
+    <property name="Valor"    type="decimal(10,2)"      not-null="true" />
+    <property name="Estoque"  type="int"                not-null="true" />
+  </class>
+
+</hibernate-mapping>
