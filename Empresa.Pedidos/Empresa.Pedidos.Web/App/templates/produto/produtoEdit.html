@@ -1,0 +1,39 @@
+<div class="row" style="padding-left: 15px; padding-right: 15px">
+    <div class="pull-left">
+        <h3>Produto [{{entidade.id ? entidade.id : 'Novo'}}]</h3>
+    </div>
+</div>    
+<ng-form name="frm">
+    <uib-tabset type="pills">
+        <uib-tab index="0" heading="Principal">
+            <div class="well">
+                
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label>Nome:</label><input type="text" ng-model="entidade.nome" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label>Valor:</label>
+                        <input type="number" ng-model="entidade.valor" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label>Estoque:</label>
+                        <input type="number" ng-model="entidade.estoque" class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+
+    <div style="height: 20px">
+        <div class="btn-group-sm pull-right" style="padding-right: 0;">
+            <button type="button" ng-click="save()" ng-disabled="frm.$invalid" class="btn btn-primary">Salvar</button>
+            <button type="button" ng-click="cancel()" class="btn btn-default">Cancelar</button>
+        </div>
+    </div>
+</ng-form>
+<br/><br/><br/>

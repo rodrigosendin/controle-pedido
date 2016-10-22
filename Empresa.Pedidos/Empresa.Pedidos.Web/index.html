@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" ng-app="app" xmlns="http://www.w3.org/1999/xhtml">
+    <head>        
+        <title>Empresa.Pedidos</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="PRAGMA" content="NO-CACHE" />
+        <meta http-equiv="Expires" content="-1">
+
+        <!--[if lte IE 9]>
+            <meta http-equiv="refresh" content="0;url=/browser.html" />
+        <![endif]-->
+        
+        <base href="/">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">        
+        <link href="assets/site.css" rel="stylesheet" />        
+    </head>
+    <body ng-cloak>
+
+        <div class="navbar navbar-default navbar-fixed-top" ng-controller="mainCtrl">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">Empresa.Pedidos</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul is-private class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Administração <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a ng-href="/usuario">Usuários</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" ng-repeat="g in menus">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{g.text}} <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="m in g.items"><a ng-href="{{m.path}}">{{m.text}}</a></li>
+                            </ul>
+                        </li>
+                    </ul>                
+                    <ul only-anon class="nav navbar-nav navbar-right">
+                        <li><a href="login">login</a></li>
+                    </ul>
+                    <div id="btnUser" is-private class="nav navbar-nav navbar-right btn-group ">
+                        <button type="button" class="btn btn-sm btn-default">{{userLogin}}</button>
+                        <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">                   
+                            <li><a href=# ng-click="logout()">Logout</a></li>
+                            <li><a href="/trocaSenha">Troca Senha</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container" id="wrap">
+            <ng-view></ng-view>
+            <br/><br/>
+        </div>       
+
+        <footer>
+            <div class="container">
+                <p class="credit">
+                    <a href="http://www.algorama.com.br/kite" target="_blank">
+                        <img class="pull-left" src="assets/imagens/logo-kite.png" width="70" style="margin-top: -10px" />
+                    </a>                
+                    <a href="http://www.algorama.com.br" target="_blank">
+                        <img class="pull-right" src="assets/imagens/logo-algorama.png" width="100" style="margin-top: -30px" />
+                    </a>
+                </p>
+            </div>
+        </footer>
+
+        <div id="loaderDiv" loader>
+            <img src="assets/imagens/infinite-gif-preloader.gif" class="ajax-loader" />
+        </div>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-sanitize.min.js"></script>
+        
+        <script src="assets/ui-bootstrap-tpls-2.1.4.min.js"></script>
+        <script src="assets/dialogs.js"></script>
+
+        <script src="app/app.js"></script>
+        <script src="app/factories/resources.js"></script>
+        <script src="app/services/authService.js"></script>
+        <script src="app/directives/authDirectives.js"></script>
+        <script src="app/directives/menuPrincipalDirective.js"></script>
+        <script src="app/directives/kiteResize.js"></script>
+        <script src="app/directives/kiteFileUpload.js"></script>
+        <script src="app/providers/menuProvider.js"></script>
+        <script src="app/controllers/mainCtrl.js"></script>
+        <script src="app/controllers/utilCtrl.js"></script>
+        <script src="app/controllers/homeCtrl.js"></script>
+        <script src="app/controllers/termosUsoCtrl.js"></script>
+        <script src="app/controllers/usuario/loginCtrl.js"></script>
+        <script src="app/controllers/usuario/trocaSenhaCtrl.js"></script>
+        <script src="app/controllers/usuario/usuarioListCtrl.js"></script>
+        <script src="app/controllers/usuario/usuarioEditCtrl.js"></script>        
+        <script src="app/controllers/cliente/clienteListCtrl.js"></script>
+        <script src="app/controllers/cliente/clienteEditCtrl.js"></script>
+        <script src="app/controllers/produto/produtoListCtrl.js"></script>
+        <script src="app/controllers/produto/produtoEditCtrl.js"></script>
+        <script src="app/controllers/pedido/pedidoListCtrl.js"></script>
+        <script src="app/controllers/pedido/pedidoEditCtrl.js"></script>
+    </body>
+</html>

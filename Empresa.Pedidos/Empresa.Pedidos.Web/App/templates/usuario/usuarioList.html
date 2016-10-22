@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="pull-left">
+            <h3>Usuários</h3>
+        </div>
+        <div class="btn-group-sm pull-right">            
+            <span> </span>
+            <a href="usuario/add" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="usuario/edit/{{entidadeSelecionada.id}}" class="btn btn-primary" ng-disabled="entidadeSelecionada == undefined"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a ng-click="remove()"  class="btn btn-danger"  ng-disabled="entidadeSelecionada == undefined"><span class="glyphicon glyphicon-trash"></span></a>
+        </div>
+    </div>
+
+    <div class="row">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr style="background-color: #F5F5F5">
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Login</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="entidade in entidades" ng-click="selecionar(entidade)"
+                    ng-class="{selecionado: entidade.id == entidadeSelecionada.id}">
+                    <td>{{entidade.id}}</td>
+                    <td>{{entidade.nome}}</td>
+                    <td>{{entidade.login}}</td>
+                </tr>
+            </tbody>
+        </table>
+<!--         <nav style="margin-top: -25px;">
+            <ul class="pagination">
+                <li>
+                    <a ng-click="paginaAnterior()" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li ng-repeat="i in pages track by $index" ng-class="{active: $index == page}"><a ng-click="pagina($index)">{{$index+1}}</a></li>
+                <li>
+                    <a ng-click="paginaProxima()" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav> -->
+    </div>    
+</div>

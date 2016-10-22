@@ -28,9 +28,10 @@ namespace Empresa.Pedidos.Testes.Repositorio
         public void Setup()
         {
             Kernel.Start();
-            _servico = Kernel.Get<Servico<Cliente>>();
-
             NHibernateHelper.CreateDb();
+
+            _servico = Kernel.Get<Servico<Cliente>>();
+            
 
             // Populando Banco para poder Testar Consultas, Update e Delete
             _localidade1 = new Localidade { Cidade = "Piracicaba", Uf = "SP" };

@@ -27,6 +27,7 @@
     </property>
 
     <!-- Registrando os Asselmblies que contém os mapeamentos -->
+    <mapping assembly="Kite.Base.Dominio"/>
     <mapping assembly="Empresa.Pedidos.Dominio"/>
     
   </session-factory>

@@ -8,6 +8,7 @@ using Kite.Base.Dominio.Servicos;
 using Empresa.Pedidos.Dominio.ObjetosValor;
 using Empresa.Pedidos.Dominio;
 using System.Collections.Generic;
+using Kite.Base.Dominio.Entidades;
 
 namespace Empresa.Pedidos.Testes.Repositorio
 {
@@ -36,6 +37,16 @@ namespace Empresa.Pedidos.Testes.Repositorio
             _servico = Kernel.Get<ServicoPedido>();
 
             NHibernateHelper.CreateDb();
+
+            // Cria um novo usuário
+            var servicoUsuario = Kernel.Get<ServicoUsuario>();
+            var usuario = new Usuario
+            {
+                Nome = "Administrador",
+                Login = "admin",
+                Senha = "123"
+            };
+            servicoUsuario.Inclui(usuario);
 
             // Populando Banco para poder Testar Consultas, Update e Delete
             var localidade1 = new Localidade { Cidade = "Piracicaba", Uf = "SP" };

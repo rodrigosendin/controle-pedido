@@ -1,9 +1,12 @@
 ﻿using Empresa.Pedidos.Dominio.Entidades;
 using Kite.Base.Dominio.Servicos;
+using Kite.Base.Dominio.Util;
 using Kite.Base.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Routing;
 
 namespace Empresa.Pedidos.Api.Controllers
 {
@@ -41,6 +44,45 @@ namespace Empresa.Pedidos.Api.Controllers
         {
             var produtos = _servico.Consulta(x => x.Nome.Contains(nome));
             return produtos;
+        }
+
+        public virtual IHttpActionResult Post([FromBody]Produto produto)
+        {
+            try
+            {
+                var ok = _servico.Inclui(produto);
+                if (ok == false)
+                    return BadRequest(_servico.Mensagens.ToMessageBoxString());
+
+                var helper = new UrlHelper(Request);
+                var location = helper.Link("DefaultApi", new { id = produto.Id });
+
+                return Created(location, produto);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
+        public virtual IHttpActionResult Put([FromBody]Produto produto)
+        {
+            try
+            {
+                var existe = _servico.Retorna(produto.Id) != null;
+                if (existe == false)
+                    return NotFound();
+
+                var ok = _servico.Altera(produto);
+                if (ok == false)
+                    return BadRequest(_servico.Mensagens.ToMessageBoxString());
+
+                return Ok(produto);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
         }
     }
 }

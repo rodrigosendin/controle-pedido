@@ -39,6 +39,9 @@ namespace Empresa.Pedidos.Api.Start
             // Configurando DateTime zone para Local
             json.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Local;
 
+            // Habilitanto CORS
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+
             // Configurando o WebApi
             app.UseWebApi(config);
         }

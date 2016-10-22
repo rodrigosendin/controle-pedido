@@ -1,6 +1,7 @@
 ﻿using Owin;
 using Empresa.Pedidos.Api.Start;
 using Kite.Base.Util;
+using Kite.Base.Api.Token;
 
 namespace Empresa.Pedidos.Api
 {
@@ -10,6 +11,7 @@ namespace Empresa.Pedidos.Api
         {
             Kernel.Start();
             ApiConfig.Configuration(app);
+            ApiToken.GerarSecret();
         }
     }
 }
